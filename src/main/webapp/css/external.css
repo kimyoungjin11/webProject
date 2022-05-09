@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* <link href="../css/external.css" rel="stylesheet" type="text/css"> 를 html에 작성하면 사용가능*/
+h1 {
+	color: blue;
+	background: orange;
+}
+h2 {
+	color: red;
+	background: yellow;
+}
+*{
+	margin: auto;
+}
+li {
+	border: 1px solid gray;
+	padding: 10px;
+}
+
+p {
+	font-size: 30px;
+	/* margin-left:10px;
+	margin-top:20px;
+	margin-right:10px;
+	margin-bottom:20px; */
+	margin: 20px 10px 20px 10px;
+	/* border-width: 1px;
+	border-style: solid;
+	border-color: green; */
+	border: 1px solid green;
+	padding: 10px 20px 10px 20px;
+}
+
+.aa {
+	background-color: pink;	
+}
+li.aa {font-size: 30px};
+#bb {background-color: fuchsia;}
+#container {
+	border: 5px dotted gray;
+	margin: auto;
+}
+
+h1,h2 {
+	text-align: center;
+}

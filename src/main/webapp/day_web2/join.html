@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.a {
+	font-weight: bold;
+	border: 5px solid black;
+	width: 300px;
+	margin: auto;
+}
+
+.b {
+	font-weight: bold;
+	border: 5px solid black;
+	width: 300px;
+	margin: auto;
+}
+
+body {
+	background-color: gray;
+}
+
+form {
+	background-color: white;
+	width: 350px;
+	margin: auto;
+}
+
+#submit {
+	width: 350px;
+}
+#submit:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+</style>
+<script>
+	function f() {
+
+		var pw1 = document.getElementById("pw1").value;
+		var pw2 = document.getElementById("pw2").value;
+		alert("가입하시겠습니까?");
+		if (pw1 != pw2) {
+			alert("비밀번호 확인");
+			document.getElementById("pw1").focus();
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+
+	<form action="join.jsp" method="post" onsubmit="return f();">
+		<fieldset class="a">
+			<legend>로그인 정보</legend>
+			<label>I D</label> <input type="text" id="userid" name="userid"
+				maxlength="20" placeholder="아이디" autofocus="autofocus"> <br> <label for="pw1">PASSWORD1</label>
+			<input type="password" id="pw1" name="pw1" maxlength="20"
+				placeholder="비밀번호"> <br> <label for="pw2">PASSWORD2</label>
+			<input type="password" id="pw2" name="pw2" maxlength="20"
+				placeholder="비밀번호확인"> <br>
+		</fieldset>
+		<fieldset class="b">
+			<legend>개인 정보</legend>
+			<label>이 름</label> <input type="text" id="user_name" name="user_name"
+				value="" maxlength="20"> <br> <label>메 일</label> <input
+				type="email" id="mail" name="mail"> <br> <label>번
+				호</label> <input type="tel" id="phone" name="phone"
+				pattern="{01}{3}-{0-9}{3,4}-{0-9}{4}"> <br>
+		</fieldset>
+		<input type="submit" value="가입" id="submit">
+	</form>
+</body>
+</html>

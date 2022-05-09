@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+ul {
+	border: 1px solid gray;
+	padding: 10px;
+	list-style: none;
+}
+
+ul.inside {
+	list-style: square;
+	list-style-position: inside;
+}
+
+li {
+	border: 1px solid gray;
+	margin: 5px;
+	padding: 10px;
+	margin: 5px;
+}
+
+div {
+	border: 1px solid gray;
+	padding: 5px;
+	margin: 5px;
+}
+
+#container {
+	background-color: lightgreen;
+	background-clip: border-box;
+}
+#internal {
+background: url("../images/login.jpg") repeat-x;/*x축으로만*/
+/* background-size: cover; */ /*전체채우기*/
+background-position: bottom center; /*배경위치*/
+background-attachment: fixed; /*스크롤해도 배경 그자리*/
+background: linear-gradient(to right bottom, blue,white); /*그라데이션*/
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<h3>list-style-position을 지정하지 않음</h3>
+		<ul>
+			<li>회사소개</li>
+			<li>도서</li>
+			<li>자료실</li>
+			<li>질문답변</li>
+			<li>동영상강의</li>
+		</ul>
+	</div>
+	<div id = "internal">
+		<ul>
+			<h3 id>list-style-position을 지정하지 않음</h3>
+			<li>회사소개</li>
+			<li>도서</li>
+			<li>자료실</li>
+			<li>질문답변</li>
+			<li>동영상강의</li>
+		</ul>
+	</div>
+
+</body>
+</html>

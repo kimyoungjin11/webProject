@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>input tag type</title>
+</head>
+<body>
+<h1>input tag의 여러가지 type 알아보기</h1>
+<form name="myfrm" action="inputResult.jsp">
+0.<input readonly="readonly" value = "읽으세요"><br>
+1.<input name="kosta1" placeholder="아이디" autofocus="autofocus" required="required"> <br>
+2.<input type="text" name="kosta2"><br>
+3.<input type="password" name="kosta3"><br>
+4.<input type="search" name="kosta4"><br>
+5.<input type="submit" value="submit" ><br>
+6.<input type="button" onclick="f();" value="서버전송"><br>
+7.<input type="email" placeholder="aa@bb.com" name="kosta5" value="이메일"><br>
+8.<input type="tel" pattern="{01}{3}-{0-9}{3,4}-{0-9}{4}" name="kosta6" value="번호"><br>
+9.<input type="url" placeholder="http://aa.bb.cc" name="kosta7"><br>
+10.<input type="number" placeholder="번호(숫자만입력)" name="kosta8" min="10" max="100" step="10"> <br>
+11.<input type="range" min="1" max="100" value="30" name="kosta9"><br>
+12.radio:서로배타적
+	<input type="radio" name="subject" value="java" checked="checked">자바
+	<input type="radio" name="subject" value="SQL">SQL
+	<input type="radio" name="subject" value="html">html
+	<input type="radio" name="subject" value="CSS">CSS 
+	<br>
+
+13.checkbox(서로독립적)
+	<input type="checkbox" name="hobby" value="걷기" checked>걷기
+	<input type="checkbox" name="hobby" value="달리기">달리기
+	<input type="checkbox" name="hobby" value="수영">수영
+	<input type="checkbox" name="hobby" value="골프">골프
+	<br>
+14.color
+	<input type="color" name="kosta10">
+	<br>
+15.month,week,date,time,datetime-local,datetime
+	<input type="month" name="kosta11"><br>
+	<input type="week" name="kosta12"><br>
+	<input type="date" name="kosta13"><br>
+	<input type="time" name="kosta14"><br>
+	<input type="datetime-local" name="kosta15"><br>
+	<input type="datetime" name="kosta16"><br>
+	
+	<select name="hobby2">
+	<option>java</option>
+	<option>SQL</option>
+	<option>html</option>
+	<option>CSS</option>
+	</select>
+	<select name="hobby3" multiple="multiple">
+	<option>java</option>
+	<option>SQL</option>
+	<option>html</option>
+	<option>CSS</option>
+	</select>
+	
+	<input type="text" list= "hobbylist">
+	<datalist id="hobbylist">
+	<option>java</option>
+	<option>SQL</option>
+	<option>html</option>
+	<option>CSS</option>
+	</datalist>
+	<br>
+	<textarea row="10" cols="50"></textarea>
+	<hr>
+16.submit
+	<input type="submit" value="서버제출"><br>
+17.reset
+	<input type="reset" value="다시입력"><br>
+18.image
+	<input type="image" src="../images/login.jpg"><br>
+19.button
+	<input type="button" value="button 타입">
+	<button>버튼태그이용1(form이 서버로 전송됨)</button>
+	<button>버튼태그이용2(form이 서버로 전송됨)</button>
+</form>
+
+20.계산기<form oninput="result.value=parseInt(num1.value) + parseInt(num2.value)">
+  <input type="number" name="num1" value="0">
+  +<input type="number" name="num2" value="0">
+  =<output name="result" for="num"></output>
+</form>
+
+	<br>
+	<progress
+	max="100" value="30">
+	</progress>
+
+	<button>버튼태그이용3(form 밖에 있어서 동작x)</button>
+<script>
+function f(){
+	alert("버튼누름");
+	myfrm.action = "anchor.html";
+	myfrm.submit();
+}
+
+</script>
+</body>
+</html>

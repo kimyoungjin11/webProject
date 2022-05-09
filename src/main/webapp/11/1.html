@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	border: 1px solid gray;
+	padding: 10px;
+}
+
+div p {
+	background-color: orange;
+} /*select 사이의 빈칸 => 자손을 의미 */
+section p {
+	color: red;
+}
+
+section > p {
+	font-size: 20px
+}/* > => 자식을 의미 */
+</style>
+
+</head>
+<body>
+	<section>
+		<p>11장 선택자들 연습</p>
+		<p>11장 선택자들 연습</p>
+		<p>11장 선택자들 연습</p>
+		<div>
+			<p>section..div.. p</p>
+		</div>
+	</section>
+	<p>단독 11장 선택자들 연습</p>
+	<div>
+		<p>div아래 11장 선택자들 연습</p>
+	</div>
+</body>
+</html>
